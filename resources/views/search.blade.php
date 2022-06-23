@@ -45,7 +45,8 @@
             </table>
         </div><!-- ./table-responsive-->
 
-        {{$users->links()}}
+{{--        {{$users->links()}}--}}
+        {{$users->appends(['s'=> request()-> s])->links() }}
     @else
         <h1>
             There is no result!

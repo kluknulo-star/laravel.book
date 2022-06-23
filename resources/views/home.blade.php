@@ -33,7 +33,8 @@
             </table>
         </div><!-- ./table-responsive-->
 
-        {{$users->links()}}
+{{--        {{$users->links()}}--}}
+        {{$users->appends(['s'=> request()-> s])->links() }}
 
     @endif
 @endsection
